@@ -1,1 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline&display=swap');
 @import 'tailwindcss';
+@import 'flowbite/src/themes/default.css';
+
+@plugin 'flowbite/plugin';
+@source '../node_modules/flowbite';
+@source './**/*.{html,js,svelte,ts}';
+
+@theme {
+	/* App tokens: use classes like bg-app, text-app, bg-surface, border-app. */
+	--font-sans: 'Mozilla Headline', sans-serif;
+	--color-app: #fff9e8;
+	--color-app-muted: #eef2f7;
+	--color-surface: #ffffff;
+	--color-surface-hover: #f1f5f9;
+	--color-app-border: #d9e2ec;
+	--color-app-text: #0f172a;
+	--color-app-text-muted: #475569;
+	--color-app-brand: #595959;
+	--color-app-brand-hover: #454545;
+	--color-app-brand-soft: #dbeafe;
+
+	/* Flowbite tokens: these control existing classes like bg-brand and text-heading. */
+	--color-brand: var(--color-app-brand);
+	--color-brand-strong: var(--color-app-brand-hover);
+	--color-brand-medium: var(--color-app-brand-soft);
+	--color-fg-brand: var(--color-app-brand);
+	--color-heading: var(--color-app-text);
+	--color-body: var(--color-app-text-muted);
+	--color-default: var(--color-app-border);
+	--color-neutral-primary: var(--color-surface);
+	--color-neutral-primary-soft: var(--color-surface);
+	--color-neutral-secondary-soft: var(--color-app-muted);
+	--color-neutral-tertiary: var(--color-surface-hover);
+}
+
+@layer base {
+	html {
+		font-family: var(--font-sans);
+	}
+
+	body {
+		@apply bg-app text-app-text font-sans;
+	}
+
+	button,
+	input,
+	textarea,
+	select {
+		font: inherit;
+	}
+}
