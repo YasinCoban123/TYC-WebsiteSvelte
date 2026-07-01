@@ -1,5 +1,5 @@
-<nav class="bg-[#FF9600]  w-full z-20 top-0 start-0  border-default">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+<nav class="bg-[#FF9600]  w-full z-20 top-0 inset-s-0  border-default">
+  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto">
   <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="/img/logo-l.png" class="h-35" alt="Logo" />
   </a>
