@@ -7,7 +7,13 @@ const config = {
 		runes: ({ filename }) => (filename.split(/[/\\]/).includes('node_modules') ? undefined : true)
 	},
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: {
+			handleHttpError: ({ path, message }) => {
+				if (path.startsWith('/photography-optimized/')) return;
+				throw new Error(message);
+			}
+		}
 	}
 };
 
