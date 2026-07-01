@@ -19,9 +19,11 @@ jobs:
         with:
           node-version: 20
       - run: npm install
+        working-directory: my-app
       - run: npm run build
+        working-directory: my-app
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: build/
+          path: my-app/build/
       - id: deployment
         uses: actions/deploy-pages@v4
