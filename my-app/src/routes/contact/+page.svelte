@@ -46,8 +46,7 @@
         <div class="flex flex-col justify-between md:p-4 leading-normal">
 
 					<h5 class="mb-2 text-xl font-semibold tracking-tight text-heading">Email:</h5>
-          <a href="" class="mb-4 text-body font-bold">cobanyasin234@gmail.com</a>
-        </div>
+          <a href="mailto:cobanyasin234@gmail.com" class="mb-4 text-body font-bold">cobanyasin234@gmail.com</a>        </div>
       </div>
 
       <div class="flex flex-col md:flex-row items-center bg-neutral-primary-soft p-6 border-default rounded-base shadow-xs max-w-lg w-full">
