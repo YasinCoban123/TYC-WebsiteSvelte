@@ -1,3 +1,31 @@
+<script>
+	let { data } = $props();
+
+	const COLUMNS = 4;
+	let photoColumns = $derived(
+		Array.from({ length: COLUMNS }, (_, col) =>
+			data.photos.filter((_, i) => i % COLUMNS === col)
+		)
+	);
+
+	let selectedImage = $state(/** @type {string | null} */ (null));
+
+	$effect(() => {
+		document.body.style.overflow = selectedImage ? 'hidden' : 'auto';
+	});
+
+	function closeImage() {
+		selectedImage = null;
+	}
+
+	/** @param {KeyboardEvent} e */
+	function handleKeydown(e) {
+		if (e.key === 'Escape') closeImage();
+	}
+</script>
+
+<svelte:window onkeydown={handleKeydown} />
+
 <head>
     <title>Photography</title>
 </head>
@@ -6,87 +34,41 @@
 
     <div class="p-10 text-center">
         <p class="mb-3 text-2xl text-app-text font-bold">Fotografie</p>
-        <p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
-        <p class="text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+        <p class="text-body">Naast programmeren is fotografie een van mijn favoriete hobby's. Hieronder vind je een kleine selectie van foto's die ik in mijn vrije tijd heb gemaakt.</p>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="grid gap-4">
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img5.jpg" alt="">
+        {#each photoColumns as column}
+            <div class="grid gap-4">
+                {#each column as src}
+                    <div>
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+                        <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
+                            {src} alt="" loading="lazy" decoding="async" onclick={() => (selectedImage = src)}>
+                    </div>
+                {/each}
             </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img23.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img26.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="grid gap-1">
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img12.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img10.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img8.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="grid gap-4">
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img13.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img20.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img15.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="grid gap-4">
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img17.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img1.jpg" alt="">
-            </div>
-            <div>
-                <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                    src="/photography/img21.jpg" alt="">
-            </div>
-        </div>
+        {/each}
     </div>
 
     <!-- Modal -->
-    <div id="imageModal"
-        class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6">
+    {#if selectedImage}
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <div
+            class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6"
+            onclick={(e) => { if (e.target === e.currentTarget) closeImage(); }}
+        >
+            <button
+                class="absolute top-5 right-5 text-white text-4xl font-bold hover:text-gray-300"
+                onclick={closeImage}
+            >
+                &times;
+            </button>
 
-        <button id="closeModal"
-            class="absolute top-5 right-5 text-white text-4xl font-bold hover:text-gray-300">
-            &times;
-        </button>
-
-        <img id="modalImage"
-            class="max-w-[90vw] max-h-[90vh] rounded-base shadow-xl"
-            src=""
-            alt="">
-    </div>
+            <img class="max-w-[90vw] max-h-[90vh] rounded-base shadow-xl" src={selectedImage} alt="">
+        </div>
+    {/if}
 
 </main>
-
-<script src="/js/photo.js"></script>

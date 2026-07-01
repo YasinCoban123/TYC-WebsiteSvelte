@@ -17,7 +17,7 @@
                     <a href="\projects" class="hover:underline me-4 md:me-6">Project</a>
                 </li>
                   <li>
-                    <a href="\portfolio" class="hover:underline me-4 md:me-6">Portfolio</a>
+                    <a href="\portfolio" class="hover:underline me-4 md:me-6">CV</a>
                 </li>
                   <li>
                     <a href="\photography" class="hover:underline me-4 md:me-6">Photography</a>

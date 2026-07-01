@@ -66,18 +66,18 @@
 <div class="flex flex-col">
     <div class="p-10 pt-20">
         <p class="mb-3 text-2xl text-app-text font-bold">Korte Intro</p>
-    <p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
-    <p class="text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+    <p class="mb-3 text-body">Hey, ik ben Taha Yasin, 21 jaar en student Informatica aan de Hogeschool Rotterdam. Coderen is iets wat ik al een tijdje doe en nog steeds met veel plezier blijf doen, of het nou gaat om een klein scriptje of een groter project voor een klant.</p>
+    <p class="text-body">Op deze pagina laat ik graag zien wat ik tot nu toe heb opgepikt: van mijn werkervaring tot de skills die ik onderweg heb opgebouwd. Scroll gerust verder of download mijn CV onderaan de pagina.</p>
     </div>
         <div class="p-10">
     <p class="mb-3 text-2xl text-app-text font-bold">Ervaring</p>
-    <p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
-    <p class="text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+    <p class="mb-3 text-body">In 2023 en 2024 heb ik ruim een jaar stage gelopen als software developer bij Xeniox, waar ik 32 uur per week meedraaide in een echt ontwikkelteam. Dankzij mijn stagebegeleider Stefan Jamal Fransen heb ik daar niet alleen technisch veel bijgeleerd, maar ook hoe je je professioneel opstelt op de werkvloer.</p>
+    <p class="text-body">Tijdens deze stage heb ik aan verschillende projecten meegewerkt, zoals Activum, AyHair, Haagse Budget Uitvaart, Quicklicense, Randstad Budget Uitvaart en Yildiz Stukadoors. Daarnaast werk ik al een aantal jaar als verkoopmedewerker in het familiebedrijf, waar ik klanten adviseer en help — een baan waar ik mijn communicatieve en klantgerichte kant goed kan inzetten.</p>
     </div>
             <div class="p-10">
     <p class="mb-3 text-2xl text-app-text font-bold">CV</p>
-    <p class="mb-3 text-body">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
-    <p class="text-body">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease, with a complete audit trail for every change.</p>
+    <p class="mb-3 text-body">Wil je iets uitgebreider weten over mijn opleiding, werkervaring en vaardigheden? In mijn CV staat dit allemaal netjes op een rij.</p>
+    <p class="text-body">Klik op de knop hieronder om mijn CV te downloaden.</p>
     <a
         href="/img/cv.pdf"
         download="TYC_CV.pdf"
