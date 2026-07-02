@@ -1,3 +1,7 @@
+<script>
+	import { asset } from '$app/paths';
+</script>
+
 <head>
     <title>Projects</title>
 </head>
@@ -31,7 +35,7 @@
         <p class="mb-1 text-lg text-app-text font-bold">Yildiz Stukadoors</p>
         <p class="text-body">Een website voor een stukadoorsbedrijf. Gebouwd met WordPress.</p>
         </div>
-        <img class="w-full md:w-1/3 rounded-lg object-cover self-start" src="/img/stageimg.png" alt="Stage Projecten">
+        <img class="w-full md:w-1/3 rounded-lg object-cover self-start" src={asset('/img/stageimg.png')} alt="Stage Projecten">
     </div>
 
     <div class="p-10 flex flex-col md:flex-row gap-8 md:items-center">
@@ -39,7 +43,7 @@
     <p class="mb-3 text-2xl text-app-text font-bold">Co & Co Mode en Kledingreparatie</p>
     <p class="text-body">De website van onze familiezaak, gespecialiseerd in de verkoop van pakken en schoenen en het repareren van kleding. Gebouwd met HTML en CSS.</p>
         </div>
-        <img class="w-full md:w-1/3 rounded-lg object-cover" src="/img/cocoimg.png" alt="Co & Co Mode en Kledingreparatie">
+        <img class="w-full md:w-1/3 rounded-lg object-cover" src={asset('/img/cocoimg.png')} alt="Co & Co Mode en Kledingreparatie">
     </div>
 
     <div class="p-10 flex flex-col md:flex-row gap-8 md:items-center">
@@ -48,7 +52,7 @@
     <p class="mb-3 text-body">Een schoolproject uit semester 2 van mijn opleiding Informatica: een bioscoopplatform waarmee je stoelen kunt selecteren en reserveren. Gebouwd met C# en SQLite3.</p>
     <a href="https://github.com/YasinCoban123/Project-B-OceanCode" target="_blank" rel="noopener noreferrer" class="text-primary-700 dark:text-primary-400 underline">Bekijk de repository op GitHub</a>
         </div>
-        <img class="w-full md:w-1/3 rounded-lg object-cover" src="/img/download.png" alt="Project B - OceanCode">
+        <img class="w-full md:w-1/3 rounded-lg object-cover" src={asset('/img/download.png')} alt="Project B - OceanCode">
     </div>
 
     <div class="p-10">

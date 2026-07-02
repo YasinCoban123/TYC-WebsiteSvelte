@@ -1,3 +1,7 @@
+<script>
+	import { asset } from '$app/paths';
+</script>
+
 <head>
     <title>Portfolio</title>
 </head>
@@ -79,7 +83,7 @@
     <p class="mb-3 text-body">Wil je iets uitgebreider weten over mijn opleiding, werkervaring en vaardigheden? In mijn CV staat dit allemaal netjes op een rij.</p>
     <p class="text-body">Klik op de knop hieronder om mijn CV te downloaden.</p>
     <a
-        href="/img/cv.pdf"
+        href={asset('/img/cv.pdf')}
         download="TYC_CV.pdf"
         class="inline-block mt-4 px-6 py-3 bg-app-text text-white font-semibold rounded-lg shadow-md hover:bg-app-text-muted hover:scale-105 transition-all duration-200"
     >

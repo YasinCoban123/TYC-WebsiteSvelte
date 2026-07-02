@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/img/favicon.svg" />
+	<link rel="icon" href={favicon} />
 </svelte:head>
 
 <Navbar />

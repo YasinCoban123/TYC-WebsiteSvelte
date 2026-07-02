@@ -8,6 +8,9 @@ const config = {
 	},
 	kit: {
 		adapter: adapter(),
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/TYC-WebsiteSvelte' : ''
+		},
 		prerender: {
 			handleHttpError: ({ path, message }) => {
 				if (path.startsWith('/photography-optimized/')) return;
