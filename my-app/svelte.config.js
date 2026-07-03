@@ -13,7 +13,7 @@ const config = {
 		},
 		prerender: {
 			handleHttpError: ({ path, message }) => {
-				if (path.startsWith('/photography-optimized/')) return;
+				if (path.includes('/photography-optimized/')) return;
 				throw new Error(message);
 			}
 		}
