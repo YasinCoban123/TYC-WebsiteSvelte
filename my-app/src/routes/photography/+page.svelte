@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	let { data } = $props();
 
 	const COLUMNS = 4;
@@ -40,12 +42,12 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         {#each photoColumns as column}
             <div class="grid gap-4">
-                {#each column as src}
+                {#each column as filename}
                     <div>
                         <!-- svelte-ignore a11y_click_events_have_key_events -->
                         <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                         <img class="gallery-image h-auto max-w-full rounded-base cursor-pointer hover:opacity-90 transition"
-                            {src} alt="" loading="lazy" decoding="async" onclick={() => (selectedImage = src)}>
+                            src="{base}/photography-optimized/{filename}" alt="" loading="lazy" decoding="async" onclick={() => (selectedImage = filename)}>
                     </div>
                 {/each}
             </div>
@@ -67,7 +69,7 @@
                 &times;
             </button>
 
-            <img class="max-w-[90vw] max-h-[90vh] rounded-base shadow-xl" src={selectedImage} alt="">
+            <img class="max-w-[90vw] max-h-[90vh] rounded-base shadow-xl" src="{base}/photography-optimized/{selectedImage}" alt="">
         </div>
     {/if}
 
