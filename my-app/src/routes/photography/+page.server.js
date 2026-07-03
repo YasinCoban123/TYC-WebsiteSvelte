@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
+import { base } from '$app/paths';
 
 export const prerender = true;
 
@@ -20,7 +21,7 @@ export async function load() {
 
 	const names = await Promise.all(files.map((file) => optimize(path.join(sourceDir, file), cacheDir, file)));
 
-	const photos = names.map((name) => `/photography-optimized/${name}`);
+	const photos = names.map((name) => `${base}/photography-optimized/${name}`);
 
 	return { photos };
 }

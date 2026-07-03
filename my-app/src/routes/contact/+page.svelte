@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { asset } from '$app/paths';
+  import { base } from '$app/paths';
   let showModal = $state(false);
   let sending = $state(false);
 
@@ -43,7 +43,7 @@
     <div class="flex flex-col gap-8 lg:items-end order-1 lg:order-2">
 
       <div class="flex flex-col md:flex-row items-center bg-neutral-primary-soft p-6 border-default rounded-base shadow-xs max-w-lg w-full">
-        <img class="object-contain w-full md:w-40 h-40 rounded-base mb-3 md:mb-0" src={asset('/img/mailimg.png')} alt="">
+        <img class="object-contain w-full md:w-40 h-40 rounded-base mb-3 md:mb-0" src="{base}/img/mailimg.png" alt="">
         <div class="flex flex-col justify-between md:p-4 leading-normal">
 
 					<h5 class="mb-2 text-xl font-semibold tracking-tight text-heading">Email:</h5>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="flex flex-col md:flex-row items-center bg-neutral-primary-soft p-6 border-default rounded-base shadow-xs max-w-lg w-full">
-        <img class="object-contain w-full md:w-40 h-40 rounded-base mb-3 md:mb-0" src={asset('/img/socialsimg.png')} alt="">
+        <img class="object-contain w-full md:w-40 h-40 rounded-base mb-3 md:mb-0" src="{base}/img/socialsimg.png" alt="">
         <div class="flex flex-col justify-between md:p-4 leading-normal">
           <h5 class="mb-2 text-xl font-semibold tracking-tight text-heading">Socials:</h5>
           <a href="https://www.linkedin.com/in/taha-yasin-coban-790716268/" class="text-body font-bold">LinkedIn</a>

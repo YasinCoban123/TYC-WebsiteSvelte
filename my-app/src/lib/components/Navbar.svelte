@@ -1,11 +1,11 @@
 <script>
-	import { resolve, asset } from '$app/paths';
+	import { resolve, base } from '$app/paths';
 </script>
 
 <nav class="bg-[#FF9600]  w-full z-20 top-0 inset-s-0  border-default">
   <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto">
   <a href={resolve('/')} class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src={asset('/img/logo-l.png')} class="h-35" alt="Logo" />
+      <img src="{base}/img/logo-l.png" class="h-35" alt="Logo" />
   </a>
   <div class="inline-flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <!-- <button type="button" class="text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Get started</button> -->

@@ -1,12 +1,12 @@
 <script>
-	import { resolve, asset } from '$app/paths';
+	import { resolve, base } from '$app/paths';
 </script>
 
 <footer class="bg-[#FF9600] shadow-xs border ">
     <div class="w-full  max-w-7xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
             <a href={resolve('/')} class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src={asset('/img/logo-l.png')} class="h-30" alt="Logo" />
+                <img src="{base}/img/logo-l.png" class="h-30" alt="Logo" />
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-app-text  sm:mb-0">
                 <li>
